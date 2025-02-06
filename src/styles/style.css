@@ -1,0 +1,128 @@
+:root {
+
+    /* COLORS */
+    --clr-white: #ffffff;
+    --clr-black: #0b0b0b;
+    --clr-grey: #7f7f7f;
+    --clr-lightgrey50: #e8e5e480;
+
+    /* sizes */
+
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+body {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    font-family: "Satoshi", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+dialog {
+    margin: auto;
+    border: none;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+dialog::backdrop {
+    background-color: rgba(36, 40, 45, 0.5);
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 24px;
+    width: 24px;
+    background-color: var(--clr-grey);
+}
+
+.nothing {
+    width: 100%;
+    height: calc(100vh - 13.25rem);
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+@media (min-width: 640px) {
+    .nothing {
+        width: 100%;
+        height: calc(100vh - 14.25rem);
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .nothing {
+        width: 100%;
+        height: calc(100vh - 10.5rem);
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .nothing {
+        width: 100%;
+        height: calc(100vh - 13.5rem);
+    }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
+
+@font-face {
+    font-family: "Satoshi";
+    src: url(/src/fonts/Satoshi-Variable.ttf);
+}

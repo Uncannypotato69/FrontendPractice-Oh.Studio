@@ -1,0 +1,53 @@
+.contactHero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 600;
+    text-align: center;
+    font-size: var(--size-4xl);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contactHero__heading {
+    font-size: inherit;
+}
+
+.contactHero__link {
+    color: var(--clr-grey);
+}
+
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+@media (min-width: 640px) {
+    .contactHero {
+        font-size: var(--size-5xl);
+    }
+}
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+    .contactHero {
+        font-size: var(--size-6xl);
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .contactHero {
+        font-size: var(--size-7xl);
+    }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
