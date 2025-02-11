@@ -7,40 +7,62 @@ import { motion } from "motion/react";
 
 const Navbar = () => {
   return (
-    <motion.div
-      className={`${classes.navbar}`}
-      initial={{ opacity: 0, y: 75, x: "-50%" }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.7,
-      }}
-      viewport={{ once: true }}
-    >
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          `${classes.navbar__link} ${isActive ? classes.active : ""}`
-        }
-      >
-        Home
-      </NavLink>
-      <NavLink
-        to="/profile"
-        className={({ isActive }) =>
-          `${classes.navbar__link} ${isActive ? classes.active : ""}`
-        }
-      >
-        Profile
-      </NavLink>
-      <NavLink
-        to="/contact"
-        className={({ isActive }) =>
-          `${classes.navbar__link} ${isActive ? classes.active : ""}`
-        }
-      >
-        Contact
-      </NavLink>
-    </motion.div>
+    <div>
+      <motion.div className={`${classes.navbar}`}>
+        <NavLink to="/" className={`${classes.navbar__link}`}>
+          {({ isActive }) => (
+            <>
+              <span className={`${classes.linkText}`}>Home</span>
+              {isActive && (
+                <motion.div
+                  layoutId="activePill"
+                  className={`${classes.pill}`}
+                  transition={{
+                    type: "spring",
+                    duration: 0.2,
+                  }}
+                ></motion.div>
+              )}
+            </>
+          )}
+        </NavLink>
+
+        <NavLink to="/profile" className={`${classes.navbar__link}`}>
+          {({ isActive }) => (
+            <>
+              <span className={`${classes.linkText}`}>Profile</span>
+              {isActive && (
+                <motion.div
+                  layoutId="activePill"
+                  className={`${classes.pill}`}
+                  transition={{
+                    type: "spring",
+                    duration: 0.2,
+                  }}
+                ></motion.div>
+              )}
+            </>
+          )}
+        </NavLink>
+        <NavLink to="/contact" className={`${classes.navbar__link}`}>
+          {({ isActive }) => (
+            <>
+              <span className={`${classes.linkText}`}>Contact</span>
+              {isActive && (
+                <motion.div
+                  layoutId="activePill"
+                  className={`${classes.pill}`}
+                  transition={{
+                    type: "spring",
+                    duration: 0.2,
+                  }}
+                ></motion.div>
+              )}
+            </>
+          )}
+        </NavLink>
+      </motion.div>
+    </div>
   );
 };
 
