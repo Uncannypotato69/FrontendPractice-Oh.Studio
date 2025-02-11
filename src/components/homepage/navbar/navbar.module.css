@@ -24,13 +24,28 @@
     text-align: center;
     flex: 1;
     padding: 0.5em 1em;
-    font-size: var(--size-base);
-    font-weight: 400;
+
     border-radius: 4rem;
-    letter-spacing: -0.05em;
+    position: relative;
 }
 
-.active {
-    background-color: white;
+.linkText {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    font-size: var(--size-base);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    transition: font-weight 200ms;
+}
+
+.navbar__link:hover .linkText {
     font-weight: 500;
+}
+
+.pill {
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr-white);
+    border-radius: 2rem;
 }
